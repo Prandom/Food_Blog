@@ -8,65 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <div>
-            <nav>
-                <div>
-                    <h1>
-                        <a href="/">SFB</a>
-                    </h1>
-                </div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>About</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <main>
-        <div>
-            <a href="#">Log In</a>
-            <a href="#">Sign Up</a>
-        </div>
-
-        <header>
-            <h2>Recipes</h2>
-            <h3>For Everyone</h3>
-        </header>
-
-        <div>
-            <h4>Latest Recipes</h4>
-            <div>
-                <!-- cards go here -->
-                <img src="" alt="">
-                <div>
-                    <span>Recipe Name</span>
-                    <span>By ...</span>
-                </div>
-            </div>
-            
-            <h4>Most Popular Recipes</h4>
-            <div>
-                <!-- cards go here -->
-            </div>
-            <div>
-                <div>Load More...</div>
+    <nav class="container z-40 bg-gray-200">
+        <div class="nav box-border shadow-xl flex place-content-between">
+            <img src="/images/logo.svg" alt="" class="w-20 p-2 filter z-50 border-solid border-1 rounded-full shadow-xl drop-shadow-xl m-3 bg-gray-100">
+            <ul class="nav-list flex items-center font-bold mont text-xl uppercase">
+                <li class="nav-items px-20 cursor-pointer">About</li>
+                <li class="nav-items px-20 cursor-pointer">Recipes</li>
+                <li class="nav-items px-20 cursor-pointer">Contact Us</li>
+            </ul>
+            <div class="btns p-1">
+                <button class="btn p-2.5 mr-10 mt-1.5  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Log In</button>
+                <button class="btn p-2.5 mr-7 mt-1.5  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Sign Up</button>
             </div>
         </div>
-    </main>
+    </nav>
 </body>
 </html>
