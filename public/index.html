@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="/public/index.js"></script>
 </head>
 <body>
-    <nav class="container z-40 bg-gray-200">
+    <nav class="sticky top-0 container z-40 bg-gray-200">
         <div class="nav box-border shadow-xl flex place-content-between">
             <img src="/images/logo.svg" alt="" class="w-20 p-2 filter z-50 border-solid border-1 rounded-full shadow-xl drop-shadow-xl m-3 bg-gray-100">
             <ul class="nav-list flex items-center font-bold mont text-xl uppercase">
-                <li class="nav-items px-20 cursor-pointer">About</li>
-                <li class="nav-items px-20 cursor-pointer">Recipes</li>
-                <li class="nav-items px-20 cursor-pointer">Contact Us</li>
+                <li class="nav-items px-20 cursor-pointer after:bg-red-400 after:bottom-0 after: height "><a href="#" class="link"> About</li></a>
+                <li class="nav-items px-20 cursor-pointer after:bg-red-400 after:bottom-0 after: height "><a href="#" class="link"> Recipes</li></a>
+                <li class="nav-items px-20 cursor-pointer after:bg-red-400 after:bottom-0 after: height "><a href="#" class="link"> Contact Us</li></a>
             </ul>
             <div class="btns p-1">
                 <button class="btn p-2.5 mr-10 mt-1.5  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Log In</button>
@@ -22,5 +23,43 @@
             </div>
         </div>
     </nav>
+
+    <!-- Carousel Creation -->
+<div class="container">
+    <div class="content">
+        <div class="slideshow">
+            <button class="slide-btn slide-btn-1"></button>
+            <button class="slide-btn slide-btn-2"></button>
+            <button class="slide-btn slide-btn-3"></button>
+            <button class="slide-btn slide-btn-4"></button>
+            <div class="slideshow-wrapper">
+                <div class="slide">
+                    <img class="slide-img"
+                        src="/images/image01.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img"
+                        src="/images/image02.jpg">
+                </div>
+                <div class="slide">
+                    <img class="slide-img"
+                        src="/images/image03.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="about-me font-mont flex place-content-between relative">
+        <div class="my-pic p-4 border-4 m-4 border-solid border-black ">
+            <img src="/images/image04.jpg" alt="">
+        </div>
+        <div class="info p-4 max-w-2xl border-4 m-4 border-dashed  border-black rounded-lg absolute right-16 top-7 bg-red-200">
+            <h3 class="text-2xl uppercase font-ubu font-bold ">Hey There!</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem nihil omnis modi deleniti ex fugit aliquam earum dolores nobis, voluptates qui veniam officia tenetur consectetur aperiam ducimus ullam explicabo. Nihil dolorem atque tempore dolorum odio! Deserunt odit dolorum, facilis, quidem culpa consectetur alias fugiat totam delectus eos dicta voluptate!<b></b>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eveniet fuga, voluptatum nemo in adipisci corrupti quam aspernatur quasi ipsam! Temporibus sunt nulla delectus atque et adipisci nihil asperiores mollitia possimus, eveniet eligendi ab beatae ut odit eius obcaecati? Optio ducimus non officia dolores deserunt adipisci commodi, tempore beatae nisi veritatis quos excepturi nostrum et officiis impedit exercitationem atque ullam quidem quod doloremque assumenda fugiat veniam blanditiis. At animi consectetur quidem incidunt libero soluta earum? Atque exercitationem quisquam, inventore libero, iusto magnam labore facere, ducimus eius numquam quasi consequatur. Dolore voluptates autem illum molestias vero est in molestiae placeat ullam.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
