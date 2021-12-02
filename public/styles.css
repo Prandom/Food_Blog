@@ -2,6 +2,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
+
 /*! tailwindcss v2.2.19 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -22392,6 +22394,10 @@ video {
   font-family: Ubuntu, sans-serif;
 }
 
+.font-jos{
+  font-family: Josefin Sans, sans-serif;
+}
+
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -32266,218 +32272,14 @@ video {
 }
 
 body {
-  background-color: rgb(255, 235, 235);
+  background-color: rgb(248, 210, 210);
 }
 
-.main-heading {
-  padding: 2rem 0 2rem 0;
+.nav{
+  box-shadow: 2px 2px 5px rgba(128, 135, 148, 0.562)
 }
 
-.content {
-  position: relative;
-}
-
-.slideshow {
-  overflow: hidden;
-  position: relative;
-}
-
-.slideshow-wrapper {
-  display: flex;
-  width: 300%;
-  max-height: 70%;
-  position: relative;
-  -webkit-animation: slideshow 20s infinite;
-          animation: slideshow 20s infinite;
-}
-
-.slide {
-  width: 100%;
-  height: 50%;
-}
-
-.slide-img {
-  width: 100%;
-  height: 50%;
-  background-size: contain;
-}
-
-img{
-  max-height: 1013px;
-}
-
-@-webkit-keyframes slideshow {
-  0% {
-    left: 0;
-  }
-
-  10% {
-    left: 0;
-  }
-
-  15% {
-    left: -100%;
-  }
-
-  25% {
-    left: -100%;
-  }
-
-  30% {
-    left: -200%;
-  }
-
-  40% {
-    left: -200%;
-  }
-
-  45% {
-    left: -100%;
-  }
-
-  55% {
-    left: -100%;
-  }
-
-  60% {
-    left: 0%;
-  }
-
-  70% {
-    left: 0%;
-  }
-
-  75% {
-    left: -100%;
-  }
-
-  80% {
-    left: -100%;
-  }
-
-  83% {
-    left: -200%;
-  }
-
-  90% {
-    left: -100%;
-  }
-
-  98% {
-    left: 0%;
-  }
-}
-
-@keyframes slideshow {
-  0% {
-    left: 0;
-  }
-
-  10% {
-    left: 0;
-  }
-
-  15% {
-    left: -100%;
-  }
-
-  25% {
-    left: -100%;
-  }
-
-  30% {
-    left: -200%;
-  }
-
-  40% {
-    left: -200%;
-  }
-
-  45% {
-    left: -100%;
-  }
-
-  55% {
-    left: -100%;
-  }
-
-  60% {
-    left: 0%;
-  }
-
-  70% {
-    left: 0%;
-  }
-
-  75% {
-    left: -100%;
-  }
-
-  80% {
-    left: -100%;
-  }
-
-  83% {
-    left: -200%;
-  }
-
-  90% {
-    left: -100%;
-  }
-
-  98% {
-    left: 0%;
-  }
-}
-
-.slide-btn {
-  background-color: #bbb;
-  border-radius: 50%;
-  border: 0.2rem solid #d33c00;
-  width: 1.2rem;
-  height: 1.2rem;
-  outline: none;
-  cursor: pointer;
-  position: absolute;
-  bottom: 3%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 30;
-}
-
-.slide-btn-1 {
-  left: 45%;
-}
-
-.slide-btn-2 {
-  left: 50%;
-}
-
-.slide-btn-3 {
-  left: 55%;
-}
-
-.slide-btn-1:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: 0;
-}
-
-.slide-btn-2:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: -100%;
-}
-
-.slide-btn-3:focus ~ .slideshow-wrapper {
-  -webkit-animation: none;
-          animation: none;
-  left: -200%;
-}
-
-.slide-btn:focus {
-  background-color: rgb(245, 19, 3);
-}
+/* Carousel styles */
 
 .link{
   position: relative;
@@ -32488,15 +32290,138 @@ img{
   position: absolute;
   bottom: 0px;
   left: 0px;
-  height: 0.125rem;
+  margin-top: 0.5rem;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+  height: 2.5px;
   transform: scaleX(0.5);
+  transition: transform 100ms ease-in-out;
 }
 
 .link:hover::after{
   transform: scaleX(1);
+}
+
+.carousel{
+  height: 600px;
+}
+
+.carousel-img{
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel_slide{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  border-width: 4px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(248, 113, 113, var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
+  padding: 1rem;
+}
+
+.carousel_button{
+  position: absolute;
+  top: 50%;
+  --tw-translate-y: 50%;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgba(248, 113, 113, var(--tw-border-opacity));
+}
+
+.carousel_button--left{
+  left: -40px;
+}
+
+.carousel_button--right{
+  right: -40px;
+}
+
+.carousel_nav{
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.carousel-indicator{
+  height: 0.75rem;
+  width: 0.75rem;
+  cursor: pointer;
+  border-radius: 9999px;
+  border-width: 0px;
+  background: rgba(0,0,0,0.3);
+}
+
+.current_slide{
+  --tw-bg-opacity: 1;
+  background-color: rgba(55, 65, 81, var(--tw-bg-opacity));
+}
+
+.carousel_track{
+  position: relative;
+  height: 100%;
+  transition: transform 300ms ease-in;
+}
+
+.carousel_track-container{
+  position: relative;
+  margin-top: 0.5rem;
+  height: 100%;
+  overflow: hidden;
+}
+
+.is-hidden{
+  display: none;
+}
+
+/* Carousel styling ends here */
+
+.color{
+  background-color: #FFEBCC;
+}
+
+.color2{
+  background-color: #FBFFE2;
+}
+
+.color3{
+  background-color: #012443;
+}
+
+.image{
+  width: 400px;
+  height: 300px;
+}
+
+.recipe{
+  margin: 1.5rem;
+  place-content: center;
+  border-radius: 0.375rem;
+  border-width: 4px;
+  border-style: dashed;
+  --tw-border-opacity: 1;
+  border-color: rgba(248, 113, 113, var(--tw-border-opacity));
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 1.5rem;
+  background-color: #FFEBCC;
+}
+
+.footer-links a{
+  padding-bottom: 3px;
 }
 
 @media (min-width: 640px){
@@ -54220,6 +54145,10 @@ img{
 
   .sm\:font-ubu{
     font-family: Ubuntu, sans-serif;
+  }
+
+  .sm\:font-jos{
+    font-family: Josefin Sans, sans-serif;
   }
 
   .sm\:text-xs{
@@ -85457,6 +85386,10 @@ img{
     font-family: Ubuntu, sans-serif;
   }
 
+  .md\:font-jos{
+    font-family: Josefin Sans, sans-serif;
+  }
+
   .md\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
@@ -116690,6 +116623,10 @@ img{
 
   .lg\:font-ubu{
     font-family: Ubuntu, sans-serif;
+  }
+
+  .lg\:font-jos{
+    font-family: Josefin Sans, sans-serif;
   }
 
   .lg\:text-xs{
@@ -147927,6 +147864,10 @@ img{
     font-family: Ubuntu, sans-serif;
   }
 
+  .xl\:font-jos{
+    font-family: Josefin Sans, sans-serif;
+  }
+
   .xl\:text-xs{
     font-size: 0.75rem;
     line-height: 1rem;
@@ -179160,6 +179101,10 @@ img{
 
   .\32xl\:font-ubu{
     font-family: Ubuntu, sans-serif;
+  }
+
+  .\32xl\:font-jos{
+    font-family: Josefin Sans, sans-serif;
   }
 
   .\32xl\:text-xs{

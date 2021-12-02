@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         'mont':['Montserrat','sans-serif'],
         'ubu':['Ubuntu','sans-serif'],
+        'jos':['Josefin Sans','sans-serif']
       }
     },
   },

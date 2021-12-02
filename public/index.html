@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="/public/index.js"></script>
+    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
 </head>
 <body>
-    <nav class="sticky top-0 container z-40 bg-gray-200">
+    <!-- Navbar -->
+    <nav class="sticky top-0 container z-40 color2">
         <div class="nav box-border shadow-xl flex place-content-between">
             <img src="/images/logo.svg" alt="" class="w-20 p-2 filter z-50 border-solid border-1 rounded-full shadow-xl drop-shadow-xl m-3 bg-gray-100">
             <ul class="nav-list flex items-center font-bold mont text-xl uppercase">
@@ -18,42 +21,50 @@
                 <li class="nav-items px-20 cursor-pointer after:bg-red-400 after:bottom-0 after: height "><a href="#" class="link"> Contact Us</li></a>
             </ul>
             <div class="btns p-1">
-                <button class="btn p-2.5 mr-10 mt-1.5  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Log In</button>
-                <button class="btn p-2.5 mr-7 mt-1.5  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Sign Up</button>
+                <button class="btn p-2.5 mr-10 mt-3  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Log In</button>
+                <button class="btn p-2.5 mr-7 mt-3  text-red-400  border-red-400 hover:bg-red-400 hover:text-gray-100 font-ubu text-lg">Sign Up</button>
             </div>
         </div>
     </nav>
 
     <!-- Carousel Creation -->
-<div class="container">
-    <div class="content">
-        <div class="slideshow">
-            <button class="slide-btn slide-btn-1"></button>
-            <button class="slide-btn slide-btn-2"></button>
-            <button class="slide-btn slide-btn-3"></button>
-            <button class="slide-btn slide-btn-4"></button>
-            <div class="slideshow-wrapper">
-                <div class="slide">
-                    <img class="slide-img"
-                        src="/images/image01.jpg">
-                </div>
-                <div class="slide">
-                    <img class="slide-img"
-                        src="/images/image02.jpg">
-                </div>
-                <div class="slide">
-                    <img class="slide-img"
-                        src="/images/image03.jpg">
-                </div>
-            </div>
+    <div class="carousel relative w-4/5 my-16 mx-auto">
+        <button class="carousel_button carousel_button--left is-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+        </button>
+        <div class="carousel_track-container">
+            <ul class="carousel_track">
+                <li class="carousel_slide current-slide">
+                    <img class="carousel-img" src="/images/image01.jpg" alt="">
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel-img" src="/images/image02.jpg" alt="">
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel-img" src="/images/image03.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+        <button class="carousel_button carousel_button--right">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+    
+        <div class="carousel_nav">
+            <button class="carousel-indicator current_slide"></button>
+            <button class="carousel-indicator mx-4"></button>
+            <button class="carousel-indicator"></button>
         </div>
     </div>
-</div>
+    <!-- About Me Section -->
     <div class="about-me font-mont flex place-content-between relative">
-        <div class="my-pic p-4 border-4 m-4 border-solid border-black ">
+        <div class="my-pic p-4 border-4 m-4 border-solid border-black color">
             <img src="/images/image04.jpg" alt="">
         </div>
-        <div class="info p-4 max-w-2xl border-4 m-4 border-dashed  border-black rounded-lg absolute right-16 top-7 bg-red-200">
+        <div class="info p-4 max-w-2xl border-4 m-4 border-dashed  border-black rounded-lg absolute right-16 top-7 color">
             <h3 class="text-2xl uppercase font-ubu font-bold ">Hey There!</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem nihil omnis modi deleniti ex fugit aliquam earum dolores nobis, voluptates qui veniam officia tenetur consectetur aperiam ducimus ullam explicabo. Nihil dolorem atque tempore dolorum odio! Deserunt odit dolorum, facilis, quidem culpa consectetur alias fugiat totam delectus eos dicta voluptate!<b></b>
@@ -61,5 +72,97 @@
             </p>
         </div>
     </div>
+    <!-- Recipe 1 -->
+    <div class="container flex place-content-center my-12">
+        <h2 class="jos ml-5 font-extrabold text-5xl ">Our Top Recipes</h2>
+    </div>
+    <div class="recipe-list flex">
+        <div class="recipe">
+            <img src="/images/image05.jpg" alt="" class="image rounded-lg">
+            <p class="font-mont p-3 my-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga, iusto architecto laborum illo numquam, ullam dolore dignissimos ipsam non asperiores voluptatibus quod odit tenetur, consequuntur ad culpa velit temporibus totam aliquam! Quaerat, ullam magnam repellat ipsam voluptas voluptatum soluta necessitatibus id in pariatur fugiat facilis. Reiciendis neque tempore id.
+            </p>
+        </div>
+        <div class="recipe">
+            <img src="/images/image06.jpg" alt="" class="image rounded-lg">
+            <p class="font-mont p-3 my-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga, iusto architecto laborum illo numquam,
+                ullam dolore dignissimos ipsam non asperiores voluptatibus quod odit tenetur, consequuntur ad culpa velit
+                temporibus totam aliquam! Quaerat, ullam magnam repellat ipsam voluptas voluptatum soluta necessitatibus id in
+                pariatur fugiat facilis. Reiciendis neque tempore id.
+            </p>
+        </div>
+        <div class="recipe">
+            <img src="/images/image07.jpg" alt="" class="image rounded-lg">
+            <p class="font-mont p-3 my-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fuga, iusto architecto laborum illo numquam,
+                ullam dolore dignissimos ipsam non asperiores voluptatibus quod odit tenetur, consequuntur ad culpa velit
+                temporibus totam aliquam! Quaerat, ullam magnam repellat ipsam voluptas voluptatum soluta necessitatibus id in
+                pariatur fugiat facilis. Reiciendis neque tempore id.
+            </p>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer-1 bg-black text-gray-100 py-8 sm:py-12 font-mont">
+        <div class="container mx-auto px-4">
+            <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4 content-evenly">
+                <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+                    <h5 class="text-xl font-bold mb-6">About</h5>
+                    <ul class="list-none footer-links">
+                        <li class="mb-2">
+                            <a href="#"
+                                class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Team</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#"
+                                class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Privacy</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#"
+                                class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6 mt-8 md:mt-0">
+                    <h5 class="text-xl font-bold mb-6">Help</h5>
+                    <ul class="list-none footer-links">
+                        <li class="mb-2">
+                            <a href="#"
+                                class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Support</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#"
+                                class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Help
+                                Center</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#"
+                                class="border-b border-solid border-transparent hover:border-purple-800 hover:text-purple-800">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="px-4 mt-4 sm:w-1/3 xl:w-1/6 sm:mx-auto xl:mt-0 xl:ml-auto absolute right-6">
+                    <h5 class="text-xl font-bold mb-6 sm:text-center xl:text-left">Stay connected</h5>
+                    <div class="flex sm:justify-center xl:justify-start">
+                        <a href=""
+                            class="w-8 h-8 border-solid border-2 border-gray-400 rounded-full text-center p-1 text-gray-600 hover:text-white hover:bg-blue-600 hover:border-blue-600">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href=""
+                            class="w-8 h-8 border-solid border-2 border-gray-400 rounded-full text-center p-1 ml-2 text-gray-600 hover:text-white hover:bg-blue-400 hover:border-blue-400">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href=""
+                            class="w-8 h-8 border-solid border-2 border-gray-400 rounded-full text-center pt-1 ml-2 text-gray-600 hover:text-white hover:bg-red-600 hover:border-red-600">
+                            <i class="fab fa-google-plus-g"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/public/index.js"></script>
 </body>
 </html>
