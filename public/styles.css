@@ -32290,11 +32290,21 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
+  height: 0.125rem;
   width: 100%;
   --tw-bg-opacity: 1;
   background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
-  height: 2.5px;
+}
+
+@media (min-width: 1024px){
+  .link::after{
+    margin-top: 0.5rem;
+  }
+}
+
+.link::after{
+  /* height: 2.5px; */
   transform: scaleX(0.5);
   transition: transform 100ms ease-in-out;
 }
@@ -32402,8 +32412,8 @@ body {
 }
 
 .image{
-  width: 400px;
-  height: 300px;
+  height: 60%;
+  width: 80%;
 }
 
 .recipe{
@@ -32417,11 +32427,24 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   padding: 1.5rem;
+}
+
+@media (min-width: 768px){
+  .recipe{
+    width: 66.666667%;
+  }
+}
+
+.recipe{
   background-color: #FFEBCC;
 }
 
 .footer-links a{
   padding-bottom: 3px;
+}
+
+.mobile-menu{
+  transition: display 400ms ease-in;
 }
 
 @media (min-width: 640px){

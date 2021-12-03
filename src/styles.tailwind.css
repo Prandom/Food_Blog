@@ -22,8 +22,8 @@ body {
 }
 .link::after{
   content: "";
-  @apply absolute bottom-0 left-0 w-full bg-red-400 mt-2;
-  height: 2.5px;
+  @apply absolute bottom-0 left-0 w-full bg-red-400 lg:mt-2 h-0.5 mt-6;
+  /* height: 2.5px; */
   transform: scaleX(0.5);
   transition: transform 100ms ease-in-out;
 }
@@ -83,13 +83,15 @@ body {
   background-color: #012443;
 }
 .image{
-  width: 400px;
-  height: 300px;
+  @apply w-4/5 h-3/5;
 }
 .recipe{
-  @apply p-6 border-4 border-dashed border-red-400 rounded-md m-6 object-cover place-content-center;
+  @apply p-6 border-4 border-dashed border-red-400 rounded-md m-6 object-cover place-content-center md:w-8/12;
   background-color: #FFEBCC;
 }
 .footer-links a{
     padding-bottom: 3px;
+}
+.mobile-menu{
+  transition: display 400ms ease-in;
 }
