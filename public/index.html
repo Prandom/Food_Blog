@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="../node_modules/@fontawesome/fontawesome-free/js/brands.js"></script>
-    <script defer src="../node_modules/@fontawesome/fontawesome-free/js/solid.js"></script>
-    <script defer src="../node_modules/@fontawesome/fontawesome-free/js/fontawesome.js"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -27,7 +24,7 @@
             <!-- Mobile Menu Toggle Button -->
             <div class="sm:hidden flex items-center mr-8">
                 <button class="outline-none mobile-menu-button">
-                    <svg class=" w-6 h-6 text-gray-700 hover:text-red-300 " x-show="!showMenu" fill="none" stroke-linecap="round"
+                    <svg class=" w-6 h-6 menu-button text-gray-700 hover:text-red-300 " x-show="!showMenu" fill="none" stroke-linecap="round"
                         stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -121,6 +118,7 @@
         </div>
     </div>
     <!-- Footer -->
+
     <footer class="footer-1 bg-black text-gray-100 py-8 sm:py-12 font-mont">
         <div class="container mx-auto px-4">
             <div class="sm:flex sm:flex-wrap sm:-mx-4 md:py-4 content-evenly">
@@ -180,7 +178,10 @@
             </div>
         </div>
     </footer>
-
-    <script src="/public/index.js"></script>
+    
+    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script src="/src/index.js"></script>
 </body>
 </html>

@@ -77,6 +77,7 @@ dotsNav.addEventListener('click',e=>{
     updateDots(currentDot,targetDot);
     vanishButton(targetIndex);
 });
+
 // Mobile Menu Toggle
 const btn = document.querySelector("button.mobile-menu-button");
 const menu = document.querySelector(".mobile-menu");
