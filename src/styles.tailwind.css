@@ -16,7 +16,7 @@ body {
 .nav{
   box-shadow: 2px 2px 5px rgba(128, 135, 148, 0.562)
 }
-/* Carousel styles */
+
 .link{
   @apply relative;
 }
@@ -30,7 +30,7 @@ body {
 .link:hover::after{
   transform: scaleX(1);
 }
-
+/* Carousel styles */
 .carousel{
     height: 600px;
 }
